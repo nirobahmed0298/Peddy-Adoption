@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,212 @@
     <!-- Daisy -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Style CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .button1 {
+            background-color: #0E7A81;
+            padding: 12px 40px;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .button2 {
+            border: 1px solid #DBEBEC;
+            border-radius: 14px;
+            padding: 20px 100px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <h1>Hello World!</h1>
+    <header class="w-11/12 mx-auto">
+        <!-- Navbar -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <a href="./index.html" class="flex gap-2 items-center">
+                    <div class="w-5 h-5"><img class="w-full h-full" src="./images/logo.webp" alt=""></div><span
+                        class="text-2xl font-bold">Peddy</span>
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a href="#" class=" border-2 p-2 rounded-full">
+                    <div class="w-5 h-5">
+                        <img class="w-full h-full"
+                            src="https://img.icons8.com/?size=100&id=jzwA9w2av2vr&format=png&color=000000" alt="User">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Banner section -->
+        <div class="hero min-h-screen">
+            <div class="hero-content text-neutral-content text-center">
+                <div class="max-w-xl text-black space-y-4">
+                    <h2>Bringing Families Together ❤️‍🔥 </h2>
+                    <h1 class="mb-5 text-5xl font-bold text-black">
+                        Your Path to Adoption Starts Here</h1>
+                    <p class="mb-5 text-sm">
+                        Welcome to Peddy, the ultimate destination for pet lovers! Whether you have a cat, dog, bird, or
+                        any other pet, we’re here to support you with all your pet care needs.
+                    </p>
+                    <button class="button1 btn">View More</button>
+                    <div class="py-0 lg:py-12">
+                        <img src="./images/pet.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main class="w-11/12 mx-auto">
+        <!-- Adopt  Your  Best Friend -->
+        <section class="text-center my-10">
+            <div>
+                <h1 class="text-4xl font-bold">Adopt Your Best Friend</h1>
+                <p class="text-sm my-5">At Peddy, we believe pets are family, and we offer personalized tips, community
+                    forums, and a marketplace for <br>the best pet care essentials.Join us and explore a world where
+                    your pets come first!</p>
+            </div>
+            <div class=" my-10 grid gap-4 grid-cols-1 lg:grid-cols-4">
+                <div>
+                    <button class="button2 flex items-center gap-1 mb-3 w-full">
+                        <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=16018&format=png&color=000000"
+                            alt="">Dogs</button>
+                </div>
+                <div><button class="button2 flex items-center gap-1 mb-3 w-full"><img class="w-10 h-10"
+                            src="https://img.icons8.com/?size=100&id=120341&format=png&color=000000"
+                            alt="">Cats</button></div>
+                <div><button class="button2 flex items-center gap-1 mb-3 w-full"><img class="w-10 h-10"
+                            src="https://img.icons8.com/?size=100&id=hopN4KhliyoJ&format=png&color=000000"
+                            alt="">Rabbits</button></div>
+                <div><button class="button2 flex items-center gap-1 mb-3 w-full"><img class="w-10 h-10"
+                            src="https://img.icons8.com/?size=100&id=kvj1DuXMSFBd&format=png&color=000000"
+                            alt="">Birds</button>
+                </div>
+            </div>
+            <div class="flex flex-row justify-between">
+                <div>
+                    <h1 class="text-xl font-bold">Best Deal For you</h1>
+                </div>
+                <div>
+                    <button class="btn button1">Sort by Price</button>
+                </div>
+            </div>
+            <!-- Peddy Card  -->
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+                <div class="card bg-base-100 shadow-xl p-4 border-[1px]">
+                    <figure>
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body p-4 space-y-1">
+                        <h2 class="card-title text-left">Name</h2>
+                        <div class="text-left flex items-center gap-2"><img class="w-6 h-6"
+                                src="https://img.icons8.com/?size=100&id=jLGlCGQS1SFr&format=png&color=000000"
+                                alt=""><span>Breed: Golder retriever</span></div>
+                        <div class="text-left flex items-center gap-2"><img class="w-6 h-6"
+                                src="https://img.icons8.com/?size=100&id=vwGXRtPWrZSn&format=png&color=000000"
+                                alt=""><span>Birth: 2024</span></div>
+                        <div class="text-left flex items-center gap-2"><img class="w-6 h-6"
+                                src="https://img.icons8.com/?size=100&id=Kv6q3DKYDp1T&format=png&color=000000"
+                                alt=""><span>Gender: Female</span></div>
+                        <div class="text-left flex items-center gap-2"><img class="w-6 h-6"
+                                src="https://img.icons8.com/?size=100&id=12093&format=png&color=000000"
+                                alt=""><span>Price : 199$</span></div>
+                        <div class="border-b-[1px]"></div>
+                        <div class="card-actions flex gap-8">
+                            <button
+                                class="btn border-[1px] border-[#0E7A81] text-[#0E7A81] px-4 rounded-md text-xs font-bold"><img
+                                    class="w-5 h-5"
+                                    src="https://img.icons8.com/?size=100&id=u8MTpAq972MG&format=png&color=000000"
+                                    alt="">
+                            </button>
+
+                            <button
+                                class="btn border-[1px] border-[#0E7A81] text-[#0E7A81] px-4 rounded-md text-sm font-bold">Buy
+                                Now
+                            </button>
+                            <button
+                                class="btn border-[1px] border-[#0E7A81] text-[#0E7A81] px-4 rounded-md text-sm font-bold">Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Liked Card Section -->
+                <div class="card bg-base-100 p-4 border-[1px] row-span-12-span-12">
+                    <div class="grid grid-cols-2">
+                        <div class="w-36 h-32 bg-red-600 rounded-md p-2">
+                            <img src="" alt="">
+                        </div>
+                        <div class="w-36 h-32 bg-red-600 rounded-md p-2">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="bg-black">
+        <div class="footer text-neutral-content p-10 w-11/12 mx-auto text-center">
+            <nav class="text-center">
+                <a href="./index.html" class="flex gap-2 items-center">
+                    <div class="w-5 h-5"><img class="w-full h-full" src="./images/logo.webp" alt=""></div><span
+                        class="text-2xl font-bold">Peddy</span>
+                </a>
+                <a class="link link-hover">Location: av. Washington 165, NY CA 54003</a>
+                <a class="link link-hover">Phone: +31 85 964 47 25</a>
+                <a class="link link-hover">Email: info@yourdomain.com</a>
+                <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+            </nav>
+            <nav>
+                <h6 class="font-bold text-xl">Useful Link</h6>
+                <a class="link link-hover">Home</a>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Animals</a>
+                <a class="link link-hover">Foundation</a>
+                <a class="link link-hover">Contact</a>
+            </nav>
+            <nav class="space-y-4">
+                <h6 class="font-bold text-xl">Drop a Message</h6>
+                <input class="w-72 p-4 rounded-lg text-black" type="email" placeholder="Enter your email">
+                <button class="btn button1">Subscribe</button>
+            </nav>
+        </div>
+    </footer>
 
     <!-- JavaScript File-->
     <script src="./script.js"></script>
 </body>
+
 </html>
