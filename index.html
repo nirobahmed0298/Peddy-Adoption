@@ -12,6 +12,7 @@
     <!-- Style CSS -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
         body {
             font-family: "Lato", sans-serif;
         }
@@ -103,24 +104,9 @@
                     forums, and a marketplace for <br>the best pet care essentials.Join us and explore a world where
                     your pets come first!</p>
             </div>
-            <div class=" my-10 grid gap-4 grid-cols-1 lg:grid-cols-4">
-                <div>
-                    <button class="button2 flex items-center gap-1 mb-3 w-full">
-                        <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=16018&format=png&color=000000"
-                            alt="">Dogs</button>
-                </div>
-                <div><button class="button2 flex items-center gap-1 mb-3 w-full"><img class="w-10 h-10"
-                            src="https://img.icons8.com/?size=100&id=120341&format=png&color=000000"
-                            alt="">Cats</button></div>
-                <div><button class="button2 flex items-center gap-1 mb-3 w-full"><img class="w-10 h-10"
-                            src="https://img.icons8.com/?size=100&id=hopN4KhliyoJ&format=png&color=000000"
-                            alt="">Rabbits</button></div>
-                <div><button class="button2 flex items-center gap-1 mb-3 w-full"><img class="w-10 h-10"
-                            src="https://img.icons8.com/?size=100&id=kvj1DuXMSFBd&format=png&color=000000"
-                            alt="">Birds</button>
-                </div>
+            <div id="Show-category-btn-img" class=" my-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
             </div>
-            <div class="flex flex-row justify-between">
+            <div class="lg:flex flex-row justify-between">
                 <div>
                     <h1 class="text-xl font-bold">Best Deal For you</h1>
                 </div>
@@ -128,22 +114,22 @@
                     <button class="btn button1">Sort by Price</button>
                 </div>
             </div>
-            <section id="Allpets" class="grid gap-5 my-10 col-span-3 md:grid-cols-2 lg:grid-cols-4">
-                <!-- Liked Card Section -->
-                <div class="card bg-base-100 p-4 border-[1px] col-span-1 row-span-12">
-                    <div class="grid grid-cols-2">
-                        <div class="w-36 h-32 bg-red-600 rounded-md p-2">
-                            <img src="" alt="">
-                        </div>
-                        <div class="w-36 h-32 bg-red-600 rounded-md p-2">
-                            <img src="" alt="">
-                        </div>
-                    </div>
+            <div>
+                <div id="loading" class="text-center hidden">
+                    <span class="loading loading-dots loading-lg"></span>
                 </div>
-            </section>
-
-
+                <div class="md:flex lg:flex gap-5">
+                    <div id="Allpets" class="grid w-full lg:w-9/12 gap-4 my-10 md:grid-cols-2 lg:grid-cols-3"></div>
+                <div id="liked-container" class="w-full md:w-3/12">
+                    <div class="card bg-base-100 w-full p-2 h-[98%] border-[1px] my-10">
+                        <div id="add-img" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-1"></div>
+                    </div> 
+                </div>
+                </div>
             </div>
+            <div id="modal-container"></div>
+            <div id="adopt-modal-container"></div>
+
         </section>
     </main>
     <!-- Footer Section -->
@@ -169,11 +155,15 @@
             </nav>
             <nav class="space-y-4">
                 <h6 class="font-bold text-xl">Drop a Message</h6>
-                <input class="w-72 p-4 rounded-lg text-black" type="email" placeholder="Enter your email">
+                <input class="w-full lg:w-72 p-4 rounded-lg text-black" type="email" placeholder="Enter your email">
                 <button class="btn button1">Subscribe</button>
             </nav>
         </div>
     </footer>
+
+
+
+
 
     <!-- JavaScript File-->
     <script src="./script.js"></script>
