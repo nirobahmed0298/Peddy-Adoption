@@ -29,7 +29,7 @@ let displayAllData = (pets) => {
                     <h1 class="text-xl font-bold">Best Deal For you</h1>
                 </div>
                 <div>
-                    <button onclick="loadAllData()" class="btn button1">Sort by Price</button>
+                    <button class="btn button1">Sort by Price</button>
                 </div>
         `
         let div = document.createElement('div');
