@@ -1,13 +1,27 @@
 
-let loadAllData = async () => {
+let loadAllData = async (Click) => {
     let response = await fetch(`https://openapi.programming-hero.com/api/peddy/pets`)
     let data = await response.json();
-    displayAllData(data.pets)
+    if(Click){
+        displayAllData(data.pets.sort(function(a,b){return a.price-b.price}));
+    }
+    else{
+        displayAllData(data.pets)
+    }
 }
 // DisplayAll Data
 let displayAllData = (pets) => {
     document.getElementById('loading').classList.add('hidden');
     let AllPets = document.getElementById('Allpets');
+    let sortedSection = document.getElementById('sorted-section');
+    sortedSection.innerHTML = `
+            <div>
+                <h1 class="text-xl font-bold">Best Deal For you</h1>
+            </div>
+            <div>
+                <button onclick="sortedbtn()" class="btn button1">Sort by Price</button>
+            </div>
+    `
     if (pets.length == 0) {
         AllPets.classList.remove('grid');
         AllPets.innerHTML = `
@@ -23,15 +37,6 @@ let displayAllData = (pets) => {
     }
     pets.forEach(pet => {
         let { pet_name, breed, price, date_of_birth, image, gender, petId } = pet
-        let sortedSection = document.getElementById('sorted-section');
-        sortedSection.innerHTML = `
-                <div>
-                    <h1 class="text-xl font-bold">Best Deal For you</h1>
-                </div>
-                <div>
-                    <button class="btn button1">Sort by Price</button>
-                </div>
-        `
         let div = document.createElement('div');
         div.innerHTML = `
         <div class="card bg-base-100 w-full shadow-xl p-4 border-[1px]">
@@ -110,6 +115,10 @@ let categoriesBtn = async (category) => {
         displayAllData(data.data);
     }, 2000);
 }
+// Sorted Button 
+function sortedbtn(){
+    loadAllData(true);
+}
 // Deactive button
 let deactiveBtn = () => {
     let buttons = document.getElementsByClassName('Show-category-btn');
@@ -150,7 +159,7 @@ let detailsBtn = async (petId) => {
                 </div>
                 <div class="modal-action">
                     <form method="dialog">
-                      <button class="btn bg-[#E6F1F2] text-[#42969C] w-full my-10">Close</button>
+                      <button class="btn bg-[#E6F1F2] text-[#42969C] w-full my-10">Cancel</button>
                     </form>
                   </div>
             </div>
@@ -163,9 +172,6 @@ let detailsBtn = async (petId) => {
 }
 // Adopt button
 let adoptBtn = async(petId) => {
-    let response = await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`);
-    let data = await response.json();
-    console.log(data)
     let adoptModal = document.getElementById('adopt-modal-container');
     adoptModal.innerHTML = `
         <dialog id="my_modal_2" class="modal">
